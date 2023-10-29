@@ -1,0 +1,97 @@
+{% extends 'home/base.html' %}
+{% load crispy_forms_tags %}
+<title>crop Recommendation</title>
+{%block content%}
+<div class="container border border-1 rounded">
+  <div class="p-3">
+    <form method="POST" action = "{% url 'homepage' %}" >
+      {% csrf_token %}
+      <!-- {{ form.as_p }} -->
+      {{ form|crispy }}
+      
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>
+
+{%endblock%}
+
+
+<!-- 
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="mb-3">
+      <label for="inputN" class="form-label">N</label>
+      <input
+        type="text"
+        class="form-control"
+        id="inputN"
+        name="N"
+        placeholder="Enter N value"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="inputP" class="form-label">P</label>
+      <input
+        type="text"
+        class="form-control"
+        id="inputP"
+        name="P"
+        placeholder="Enter P value"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="inputK" class="form-label">K</label>
+      <input
+        type="text"
+        class="form-control"
+        id="inputK"
+        name="K"
+        placeholder="Enter K value"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="inputRainfall" class="form-label">Rainfall</label>
+      <input
+        type="text"
+        class="form-control"
+        id="inputRainfall"
+        name="rainfall"
+        placeholder="Enter rainfall"
+      />
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="mb-3">
+      <label for="inputTemperature" class="form-label">Temperature</label>
+      <input
+        type="text"
+        class="form-control"
+        id="inputTemperature"
+        name="temperature"
+        placeholder="Enter temperature"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="inputHumidity" class="form-label">Humidity</label>
+      <input
+        type="text"
+        class="form-control"
+        id="inputHumidity"
+        name="humidity"
+        placeholder="Enter humidity"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="inputPh" class="form-label">pH</label>
+      <input
+        type="text"
+        class="form-control"
+        id="inputPh"
+        name="ph"
+        placeholder="Enter pH value"
+      />
+    </div>
+  </div>
+</div> -->
